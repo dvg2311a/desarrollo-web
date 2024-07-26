@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Registro</title>
+</head>
+
+<body>
+    <form action="#">
+        <h1>Registro en nuestra tienda</h1>
+        <div class="container">
+            <label for="name">Nombre de usuario:</label>
+            <input type="text" class="datos" name="name" placeholder="E.j: luis" required>
+        </div>
+
+
+        <div class="container">
+            <label for="email">Email:</label>
+            <input type="email" class="datos" name="email" autocomplete="email" placeholder="E.j: luis@gmail.com" required>
+        </div>
+
+        <div class="container"><label for="edad">Edad:</label>
+            <input type="number" class="datos" name="edad" min="18" placeholder="E.j: 21" required>
+        </div>
+
+        <div class="container"><label name="fecha">Fecha de nacimiento:</label>
+            <input type="date" class="datos" name="fecha" required>
+        </div>
+
+        <div class="container genero"><label>Género:</label>
+
+            <div class="">
+                <input type="radio" name="masc" value="Masculino">
+                <label for="masc">Masculino</label>
+            </div>
+
+            <div class="">
+                <input type="radio" name="fem" value="Femenino">
+                <label for="fem">Femenino</label>
+            </div>
+        </div>
+
+        <div class="container">
+            <label for="select">Recomendado por:</label>
+            <select name="select" class="datos">
+                <option value="Google">Google</option>
+                <option value="Microsoft">Microsoft</option>
+                <option value="IBM">IBM</option>
+                <option value="Apple">Apple</option>
+            </select>
+        </div>
+
+        <div class="container text">
+            <label for="comentarios">Comentarios:</label>
+            <textarea name="comentarios"></textarea>
+        </div>
+
+        <div class="container"><label for="terminos">Acepto términos y condiciones:</label>
+            <input type="checkbox" name="terminos" class="check">
+        </div>
+
+        <div class="container">
+            <input type="button" class="button" value="Registrar">
+        </div>
+    </form>
+</body>
+
+</html>
