@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Menú Interactivo</title>
+</head>
+
+<body>
+    <div class="btn-open" id="btn-open" title="Botón para abrir el menú">
+        <hr>
+        <hr>
+        <hr>
+    </div>
+    <nav class="sidebar" id="sidebar">
+        <div class="container-sidebar">
+            <div class=" menu">
+                <h1>Menú</h1>
+            </div>
+            <div class="item-sidebar inic"><input type="button" value="Inicio" id="inicio" title="Botón de inicio">
+            </div>
+            <div class="item-sidebar form"><input type="button" value="Formulario" id="formulario"
+                    title="Botón de Formulario"></div>
+        </div>
+        <div class="container-btn" id="btn" title="Botón para cerrar el menú">
+            <hr>
+            <hr>
+            <hr>
+        </div>
+    </nav>
+
+    <main class="welcome-container" id="welcome-Container">
+        <div id="container-items" class="temp">
+            <div class="container-text">
+                <h1 class="welcome-text" id="welcome-text">¡Bienvenido al mundo web!</h1>
+            </div>
+            <div class="btn-container" id="btn-close" title="Botón para borrar el saludo">
+                <hr class="close" id="close-1">
+                <hr class="close" id="close-2">
+            </div>
+        </div>
+
+        <div class="form-view" id="formView">
+            <div class="items-form name">
+                <label for="nombre">Nombre*</label>
+                <input type="text" name="nombre" id="nombre" autocomplete="name" required>
+            </div>
+            <div class="items-form last_name">
+                <label for="last_name">Apellido*</label>
+                <input type="text" name="last_name" id="last_name" autocomplete="name" required>
+            </div>
+            <div class="items-form correo">
+                <label for="email">Correo Electrónico*</label>
+                <input type="email" name="email" id="email" autocomplete="email" required>
+            </div>
+
+            <div class="items-form save">
+                <input type="button" value="Guardar" title="Botón para guardar" id="save">
+            </div>
+        </div>
+
+        <div class="btn-saludo" id="saludo">
+            <input type="button" value="Saludar" id="inputSaludo" title="Botón para saludar">
+        </div>
+
+    </main>
+    <script src="./script.js"></script>
+</body>
+
+</html>
