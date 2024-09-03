@@ -7,7 +7,7 @@
 html {
   font-size: 62.5%;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-} 
+}
 
 :root {
   --bg-color: #1e293b;
@@ -15,6 +15,7 @@ html {
   --transition-type: all 0.3s ease;
   --transform-scale: scale(0.8);
   --font-size: 1.5rem;
+  --btn-warning: rgb(255, 0, 0);
 }
 
 body {
@@ -25,8 +26,7 @@ body {
   display: block;
   position: relative;
   max-width: 16%;
-  height: 59.55rem;
-  height: clamp(59.33rem, 105rem, 101vh);
+  height: clamp(59.33rem, 195rem, 100vh);
   background: var(--bg-color);
   margin: -10px 0 0 -1px;
   box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.2);
@@ -83,6 +83,7 @@ body {
     color: var(--bg-color);
     transition: var(--transition-type);
   }
+  
 }
 
 /* BOTÓN SIDEBAR */
@@ -131,7 +132,6 @@ body {
   }
 }
 
-
 /* FIN DE LA SIDEBAR */
 
 /* MAIN DE BIENVENIDA */
@@ -141,17 +141,17 @@ body {
   flex-direction: row;
   justify-content: center;
   width: 80vw;
-  height: 84vh;
+  height: 92dvh;
   left: 22rem;
-  top: 9rem;
+  top: 2rem;
 
   & .container-text {
-    margin-top: 10px;
     color: #e2e8f0;
   }
 
-  & #container-items{
+  & #container-items {
     display: none;
+    margin-top: 10rem;
   }
 }
 
@@ -162,11 +162,11 @@ body {
   flex-direction: column;
   justify-content: space-around;
   right: 50px;
-  top: -57px;
-  margin-top: -0.4rem;
+  top: 1.4rem;
+  margin-top: 0.15em;
   padding: 5px;
-  width: 35px;
-  height: 35px;
+  width: 25px;
+  height: 25px;
   cursor: pointer;
   border-radius: 5px;
   border: 1px solid white;
@@ -174,6 +174,10 @@ body {
   &:active {
     transform: var(--transform-scale);
     transition: transform 0.2s;
+  }
+
+  & hr {
+    width: 30px;
   }
 }
 
@@ -184,10 +188,10 @@ body {
 }
 
 .btn-container #close-1 {
-  transform: rotate(45deg) translate(10px, 10px);
+  transform: rotate(45deg) translate(3px, 10px);
 }
 .btn-container #close-2 {
-  transform: rotate(134deg) translate(1px, -1px);
+  transform: rotate(134deg) translate(6px, 2px);
 }
 
 .btn-saludo {
@@ -214,8 +218,9 @@ body {
 .form-view {
   display: none;
   position: absolute;
-  left: 35%;
+  left: 26%;
   padding: 20px;
+  padding-top: -7rem;
   background: transparent;
   backdrop-filter: blur(10px);
   grid-template-columns: repeat(3, 1fr);
@@ -224,8 +229,8 @@ body {
     "name name last_name"
     "correo correo correo"
     "save save save";
-  max-width: 350px; 
-  height: 65%;
+  max-width: 350px;
+  height: 55%;
   box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.2);
   transition: all 1s ease-in;
 }
@@ -273,26 +278,115 @@ body {
   display: flex;
   justify-content: end;
   place-items: center;
-
+  
   & #save {
     padding-left: 43px;
+    outline: none;
   }
 }
 
-@media screen and (min-width:1450px ){
-    .sidebar{
-      width: 13%;
-    }
+@media screen and (min-width: 1450px) {
+  .sidebar {
+    width: 13%;
+  }
 
-     #inputSaludo {
-      font-weight: 600;
-      &#inputSaludo[value]{
-        padding-left: 3rem;
-      }
+  #inputSaludo {
+    font-weight: 600;
+    &#inputSaludo[value] {
+      padding-left: 3rem;
     }
+  }
 
-    .form-view{
-      margin-top: 7%;
-      height: 50%;
-    }
+  .form-view {
+    margin-top: 7%;
+    height: 50%;
+  }
+}
+
+/* TABLA DE DATOS */
+.dataContainer {
+  display: none;
+  width: 100rem;
+  height: 50rem;
+  margin-top: 4rem;
+  margin-left: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 10%);
+  grid-template-areas:
+    "nombre apellido correo opciones"
+    "nombreUser apellidoUser correoUser opcionesUser";
+  place-content: end;
+  place-items: center;
+}
+
+.titulos {
+  color: var(--bg-color);
+  background: var(--text-color);
+  width: 100%;
+  height: 100%;
+  font-size: var(--font-size);
+  font-weight: 400;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &.nombreTitle {
+    grid-area: nombre;
+    border-radius: 5px 0 0 5px;
+  }
+
+  &.apellidoTitle {
+    grid-area: apellido;
+  }
+
+  &.correoTitle {
+    grid-area: correo;
+  }
+
+  &.opcionesTitle {
+    grid-area: opciones;
+    border-radius: 0 5px 5px 0;
+  }
+}
+
+.info {
+  color: var(--text-color);
+  font-size: var(--font-size);
+  font-weight: 200;
+}
+
+.infoDelete {
+  display: flex;
+  position: relative;
+  background: transparent;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-top: -0.4rem;
+  padding: 5px;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 1px solid white;
+  transition: var(--transition-type);
+  margin-top: 10px;
+
+  &:active {
+    transform: var(--transform-scale);
+    background: var(--btn-warning);
+    transition: transform 0.6s background 0.2s;
+  }
+
+  & hr {
+    width: 30px;
+  }
+
+  & #close-3 {
+    transform: rotate(45deg) translate(-3px, 8px);
+  }
+
+  & #close-4 {
+    transform: rotate(135deg) translate(3px, 9px);
+  }
 }

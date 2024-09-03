@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Widget de Pase de Diapositivas</title>
+    <!-- Vinculamos el archivo CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Contenedor principal del pase de diapositivas -->
+    <div class="slideshow-container">
+        <!-- Diapositiva 1 -->
+        <div class="slides">
+            <img src="imagen1.png" alt="Imagen 1">
+        </div>
+        <!-- Diapositiva 2 -->
+        <div class="slides">
+            <img src="imagen2.jpg" alt="Imagen 2">
+        </div>
+        <!-- Diapositiva 3 -->
+        <div class="slides">
+            <img src="imagen3.jpg" alt="Imagen 3">
+        </div>
+
+        <!-- Botones de navegación -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    <!-- Sección sobre Nebulosas -->
+    <section class="universe-section">
+        <h2>El Universo</h2>
+        <p>
+            El universo es el conjunto de todo lo que existe: espacio, tiempo, materia, energía,
+                y las leyes físicas que los gobiernan. Se estima que el universo tiene aproximadamente
+                13.8 mil millones de años de antigüedad y ha estado en constante expansión desde el
+                Big Bang, un evento explosivo que marcó su origen.
+        </p>
+        <p>
+            En el universo se encuentran galaxias, estrellas, planetas, y otros cuerpos celestes.
+            A pesar de su inmensidad, el universo sigue siendo en gran parte desconocido, con
+            misterios como la materia oscura y la energía oscura aún sin resolver.
+        </p>
+    </section>
+
+    <!-- Vinculamos el archivo JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

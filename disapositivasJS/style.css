@@ -1,0 +1,86 @@
+body{
+   background: #1e293b;
+}
+
+/* Estilo para el contenedor del pase de diapositivas */
+.slideshow-container {
+    position: relative;
+    width: 80%;
+    max-width: 500px;
+    margin: 20px auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    overflow: hidden;
+}
+
+/* Estilo para las diapositivas */
+.slides {
+    display: none;
+    width: 100%;
+}
+
+/* Estilo para las imágenes */
+.slides img {
+    width: 100%;
+    display: block;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Estilo para los botones de navegación */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: 30px;
+    padding: 8px;
+    margin-top: -20px;
+    color: #333;
+    font-weight: bold;
+    font-size: 14px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    user-select: none;
+    transition: background-color 0.3s;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(200, 200, 200, 0.8);
+}
+
+/* Estilo para la sección de universo */
+.universe-section {
+    width: 80%;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #eef2f7;
+    border: 1px solid #ccc; 
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    color: #333; 
+    font-family: 'Arial', sans-serif; 
+}
+
+.universe-section h2 {
+    font-size: 24px;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.universe-section p {
+    font-size: 16px;
+    line-height: 1.6; 
+    text-align: justify;
+    margin-bottom: 10px;
+}

@@ -42,7 +42,7 @@
             </div>
         </div>
 
-        <div class="form-view" id="formView">
+        <form class="form-view" id="formView">
             <div class="items-form name">
                 <label for="nombre">Nombre*</label>
                 <input type="text" name="nombre" id="nombre" autocomplete="name" required>
@@ -55,9 +55,24 @@
                 <label for="email">Correo Electrónico*</label>
                 <input type="email" name="email" id="email" autocomplete="email" required>
             </div>
-
+    
             <div class="items-form save">
-                <input type="button" value="Guardar" title="Botón para guardar" id="save">
+                <input type="submit" value="Guardar" title="Botón para guardar" id="save">
+            </div>
+        </form>
+
+        <div id="dataContainer" class="dataContainer">
+            <div class="titulos nombreTitle">
+                <h3>Nombre</h3>
+            </div>
+            <div class="titulos apellidoTitle">
+                <h3>Apellido</h3>
+            </div>
+            <div class="titulos correoTitle">
+                <h3>Correo Electrónico</h3>
+            </div>
+            <div class="titulos opcionesTitle">
+                <h3>Opciones</h3>
             </div>
         </div>
 
@@ -67,6 +82,7 @@
 
     </main>
     <script src="./script.js"></script>
+    <script src="./form.js"></script>
 </body>
 
 </html>
